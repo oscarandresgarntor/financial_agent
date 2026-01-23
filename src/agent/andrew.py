@@ -14,7 +14,7 @@ VOICE_CONFIG = {
     "voiceId": "pNInz6obpgDQGcFmaJgB",  # "Adam" - professional male voice
     "stability": 0.5,
     "similarityBoost": 0.75,
-    "model": "eleven_turbo_v2",
+    "model": "eleven_multilingual_v2",  # Better pronunciation for Spanish
 }
 
 # LLM configuration using OpenAI GPT-4o
@@ -38,11 +38,11 @@ ANDREW_CONFIG = {
     "model": LLM_CONFIG,
     "firstMessage": ANDREW_FIRST_MESSAGE,
     "firstMessageMode": "assistant-speaks-first",
-    # Transcription settings
+    # Transcription settings (multi-language support)
     "transcriber": {
         "provider": "deepgram",
         "model": "nova-2",
-        "language": "en-US",
+        "language": "multi",  # Auto-detect English and Spanish
     },
     # Call behavior settings
     "silenceTimeoutSeconds": 30,
