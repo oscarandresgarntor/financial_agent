@@ -92,8 +92,8 @@ def check_credit_card_eligibility(
     else:
         return EligibilityResult(
             status=EligibilityStatus.NOT_ELIGIBLE,
-            message="Based on the information provided, you may not qualify for the Bank-travel card at this time.",
-            recommended_action="I'd recommend our Starter Credit Card, which is designed to help build credit history. Would you like to hear more about that option?",
+            message="Unfortunately, based on the information provided, you don't currently qualify for this credit card.",
+            recommended_action="I'd recommend our Starter Credit Card, which is designed to help build credit history. Can I transfer you to a human representative who can tell you more about that option?",
             annual_income=annual_income,
             has_existing_credit=has_existing_credit,
         )
